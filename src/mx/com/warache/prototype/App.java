@@ -2,7 +2,7 @@ package mx.com.warache.prototype;
 
 public class App {
 
-	public static void main(String[] args) throws CloneNotSupportedException{
+	public static void main(String[] args){
 		
 		Motocicleta moto1 = new Motocicleta();
 
@@ -14,10 +14,16 @@ public class App {
 		moto1.setRearSuspension("Monoshock");
 		
 		Motocicleta moto2 = moto1.clone();
-		
 		System.out.println(moto1);
+		System.out.println(moto2);
 		
-		moto2.setBrand("MV Agusta");
+		moto1.setWheels(4);
+		System.out.println(moto1);
+		System.out.println(moto2);
+		
+		moto2.setBrand("KTM");
+		moto1.setWheels(6);
+		System.out.println(moto1);
 		System.out.println(moto2);
 	}
 
