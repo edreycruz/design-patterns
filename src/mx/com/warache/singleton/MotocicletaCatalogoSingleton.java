@@ -7,7 +7,7 @@ import java.util.Random;
 public final class MotocicletaCatalogoSingleton {
 
 	private static volatile MotocicletaCatalogoSingleton catalogo;
-	
+
 	private List<Integer> randomIntegers;
 
 	private MotocicletaCatalogoSingleton() {
@@ -19,7 +19,6 @@ public final class MotocicletaCatalogoSingleton {
 			synchronized (MotocicletaCatalogoSingleton.class) {
 				if (catalogo == null) {
 					System.out.println("Generando catálogo...");
-//					return new MotocicletaCatalogoSingleton();
 					catalogo = new MotocicletaCatalogoSingleton();
 				}
 			}
@@ -27,22 +26,21 @@ public final class MotocicletaCatalogoSingleton {
 		return catalogo;
 
 	}
-	
-	private List<Integer> generateRandomIntegerList(){
-		
+
+	private List<Integer> generateRandomIntegerList() {
+
 		Random random = new Random();
 		List<Integer> list = new ArrayList<>();
-		
-		while(list.size() < 15) {
+
+		while (list.size() < 15) {
 			list.add(random.nextInt());
 		}
-		
+
 		return list;
 	}
 
 	public List<Integer> getRandomIntegers() {
 		return randomIntegers;
 	}
-	
-	
+
 }
