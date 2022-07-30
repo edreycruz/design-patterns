@@ -1,4 +1,4 @@
-package mx.com.warache.factory;
+package mx.com.warache.factorymethod;
 
 public class DoblePropositoMotocicleta extends Motocicleta{
 
