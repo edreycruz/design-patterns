@@ -7,9 +7,9 @@ public class PedidoMotocicletaYamahaAdapter implements PedidoMotocicleta {
 
 	private ThirdPartyYamahaMotorcycleLibraryClass pedidosYamaha;
 
-	public PedidoMotocicletaYamahaAdapter(ThirdPartyYamahaMotorcycleLibraryClass pedidosYamaha) {
+	public PedidoMotocicletaYamahaAdapter() {
 		super();
-		this.pedidosYamaha = pedidosYamaha;
+		this.pedidosYamaha = new ThirdPartyYamahaMotorcycleLibraryClass();
 	}
 
 	@Override
